@@ -1,4 +1,4 @@
-package com.example.instaclonekmm.android
+package com.example.instaclonekmm.android.common.theming
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
