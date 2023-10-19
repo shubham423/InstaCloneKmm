@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.google.devtools.ksp") version "1.8.21-1.0.11"
+
 }
 
 android {
@@ -30,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -46,4 +48,17 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.4.3")
     implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.activity:activity-compose:1.7.1")
+
+    implementation("io.github.raamcosta.compose-destinations:core:1.8.38-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.8.38-beta")
+
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    implementation("io.insert-koin:koin-androidx-compose:3.4.1")
+
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
+
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
 }
