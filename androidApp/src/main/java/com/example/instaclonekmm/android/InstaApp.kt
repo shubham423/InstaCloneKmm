@@ -8,6 +8,5 @@ import com.ramcosta.composedestinations.DestinationsNavHost
 @Composable
 fun InstaApp() {
     val navHostController = rememberNavController()
-
     DestinationsNavHost(navGraph = NavGraphs.root, navController = navHostController)
 }
