@@ -38,6 +38,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    applicationVariants.all {
+        addJavaSourceFoldersToModel(
+            File(buildDir, "generated/ksp/$name/kotlin")
+        )
+    }
 }
 
 dependencies {
